@@ -2,6 +2,7 @@ import os
 try:
     from telethon.sessions import StringSession
     import asyncio, re, json, shutil
+    from server import server
     from kvsqlite.sync import Client as uu
     from telethon.tl.types import KeyboardButtonUrl
     from telethon.tl.types import KeyboardButton, ReplyInlineMarkup
@@ -299,7 +300,8 @@ async def start_lis(event):
                     await x.send_message(text)
                     return
             await x.send_message("- لم يتم العثور علي هذا الرقم ضمن قائمة الحسابات")
-                    
+            
+            server( )
 client.run_until_disconnected()
 
 #by @F_E_Y
